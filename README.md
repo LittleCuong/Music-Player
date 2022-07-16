@@ -1,4 +1,3 @@
 # Music-Player
-Music website
 This is my personal music website. I created it by HTML and CSS. I used JS to create some function such as play/pause music, choose next/previous ....
 In the near future, i think i will update it to the new one!
