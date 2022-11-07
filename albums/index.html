@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+<body>
+    
+    <div class="main grid row">
+      <div class="navbar col l-2">
+        <div class="navbar-infor"> 
+          <div class="navbar-infor--avt" style="background-image: url(./img/270791453_881825802483433_2225561791336130221_n.jpg);"></div>
+          <span class="navbar-infor--name">Nguyen Phu Cuong</span>
+          <span class="navbar-infor--email">littlecuong922@gmail.com</span>
+        </div>
+      
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <!-- <i class="navbar-icon fa-solid fa-house"></i> -->
+            <i class="navbar-icon ti-home"></i>
+            <span class="navbar-option">Home</span>
+          </li>
+          <li class="navbar-item">
+            <!-- <i class="navbar-icon fa-brands fa-edge"></i> -->
+            <i class="navbar-icon ti-search"></i>           
+            <span class="navbar-option">Browse</span>
+          </li>
+          <li class="navbar-item">
+            <i class="navbar-icon ti-folder"></i>
+            <span class="navbar-option">Library</span>
+          </li>
+          <li class="navbar-item">
+            <i class="navbar-icon ti-user"></i>
+            <span class="navbar-option">Artists</span>
+          </li>          
+          <li class="navbar-item">
+            <i class="navbar-icon ti-video-camera"></i>
+            <span class="navbar-option">Videos</span>
+          </li>
+          <div class="navbar-divider"></div>
+          <li class="navbar-item navbar-option--bottom">
+            <i class="navbar-icon ti-heart"></i>
+            <span class="navbar-option navbar-option--bottom">Liked Songs</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="body-container col l-10">
+        <div class="upper-body">
+          <div class="header-main col l-10">
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="search-icon fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text" 
+              class="search-input" 
+              placeholder="Artists, songs or podcasts "
+              onclick="showSuggestion()"
+            >
+          </div>
+
+          <!-- <ul class="search-suggest-list">
+            <li class="search-suggest-item">
+              <a href="#" class="search-suggest-link">I Like You</a>
+            </li>
+            <li class="search-suggest-item">
+              <a href="#" class="search-suggest-link">Sugar</a>
+            </li>
+            <li class="search-suggest-item">
+              <a href="#" class="search-suggest-link">The Golden Age</a>
+            </li>
+            <li class="search-suggest-item">
+              <a href="#" class="search-suggest-link">Bullets</a>
+            </li>
+          </ul> -->
+          
+        </div>
+
+        <div class="header-right">
+          <div class="setting-container">
+            <button class="setting-btn">
+              <i class="setting-icon fa-solid fa-gear"></i>
+            </button>
+          </div>
+            
+
+          <div class="login-container">
+            <button class="login-btn">
+              <i class="avatar-icon fa-solid fa-user-tie"></i>
+              <span class="login-user-name">Cuong Nguyen</span>
+            </button>
+          </div>
+        </div>
+          </div>
+
+          <div class="choice-wrap">
+          <div class="choice-heading">
+            
+          </div> 
+
+          <div class="choice-list"> 
+            
+          </div>  
+          </div>
+        </div>
+
+        <div class="music-wrap grid row">
+          <div class="music-list col l-7">
+            <div class="music-list--heading">
+              <h3 class="music-list-header">Most Popular</h3>
+              <span class="music-list-description"></span>
+            </div>
+            <div class="music-list--body">
+              
+            </div>           
+          </div>
+          <div class="music-player-container col l-4">
+            <!-- Dashboard -->
+            <div class="music-player--dashboard">
+              <h3 class="music-player-dashboard--tittle">Now Playing:</h3>
+              <span class="music-playing-header--name"></span>
+            </div>
+            <!-- Body -->
+            <div class="music-playing-body">  
+              <div class="fix-wrap">          
+                <div class="music-playing-disc-wrap">
+                  <div class="music-playing-disc">
+                  <img src="" alt="" class="music-playing-img">
+                  </div>
+                  <div class="music-playing-name"></div>
+                  <div class="music-playing-author"></div>
+                  <div class="progress-wrap">
+                  <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                  <audio id="audio" src=""></audio>
+                  </div>
+                </div> 
+              </div>
+              <!-- Control -->
+              <div class="music-playing-control">
+                <div class="control">
+                  <div class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                  </div>
+                  <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                  </div>
+                  <div class="btn btn-toggle-play">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                  </div>
+                  <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                  </div>
+                  <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+
+
+    <script src="/main.js">
+    </script>
+</body>
+</html>

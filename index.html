@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./base.css">
+</head>
+<body>
+  <div class="main">
+  <div class="grid">
+    <div class="row no-gutters">
+      <div id="navbar" class="navbar col l-2 m-2">
+        <div class="navbar-infor"> 
+          <div class="navbar-infor--avt" style="background-image: url(./img/270791453_881825802483433_2225561791336130221_n.jpg);"></div>
+          <span class="navbar-infor--name">Nguyen Phu Cuong</span>
+          <span class="navbar-infor--email">littlecuong922@gmail.com</span>
+        </div>     
+        <ul class="navbar-list">        
+          <li class="navbar-item">
+            <i class="navbar-icon ti-folder"></i>
+            <span class="navbar-option">Library</span>
+          </li>
+          <li class="navbar-item">
+            <i class="navbar-icon ti-user"></i>
+            <span class="navbar-option">Artists</span>
+          </li>          
+          <li class="navbar-item">
+            <i class="navbar-icon ti-video-camera"></i>
+            <span class="navbar-option">Videos</span>
+          </li>
+          <div class="navbar-divider"></div>
+          <li class="navbar-item navbar-option--bottom">
+            <i class="navbar-icon ti-heart"></i>
+            <span class="navbar-option navbar-option--bottom">Liked Songs</span>
+          </li>
+        </ul>
+      </div>
+      <div class="body-container col l-10 m-10 c-12">
+        <div class="upper-body grid ">
+            <div class="header-main row no-gutters">         
+              <div class="search-container col l-8 m-8 c-10">
+                <div class="search-bar">
+                  <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Artists, songs or podcasts "
+                    onclick="showSuggestion()"
+                  >
+                </div>       
+              </div>
+
+              <div id="mobile-button" class="mobile-menu-button c-2">
+                <i class="mobile-menu-icon ti-menu-alt"></i>
+              </div>
+            </div>
+
+            <div class="choice-wrap">              
+              <div class="choice-heading">
+                <div clase="choice-heading-right">
+                  <h3 class="choice-head">Today Choice</h3>
+                  <span class="choice-description">6 Albums</span>
+                </div>
+              </div>
+              <div class="choice-list grid row sm-gutter">
+                <div class="choice-item post-malone col l-4 m-4 c-0">
+                  <a href="" class="choice-link">
+                    <div class="choice-item-img">
+                      
+                    </div>
+                  <span class="choice-item--name">Post Malone</span>
+                  </a>
+                </div>
+                <div class="choice-item maroon-5 col l-4 m-4 c-0">
+                  <a href="" class="choice-link">
+                    <div>
+                      <img src="https://i.scdn.co/image/ab6761610000e5eb288ac05481cedc5bddb5b11b" alt="" class="choice-item-img">
+                    </div>
+                    <span class="choice-item--name">Maroon 5</span>
+                  </a>  
+                </div>
+                <div class="choice-item the-weeknd col l-4 m-4 c-0">
+                  <a href="" class="choice-link">
+                    <div>
+                      <img src="https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36" alt="" class="choice-item-img">
+                    </div>
+                    <span class="choice-item--name">The Weeknd</span>
+                  </a>
+                </div>
+                <div class="choice-item k-d-a col l-4 m-4 c-0">
+                  <a href="" class="choice-link">
+                    <div>
+                      <img src="https://i.scdn.co/image/ab67616100005174dc1dc943555dfa1ee2a107e5" alt="" class="choice-item-img">
+                    </div>
+                    <span class="choice-item--name">K/DA</span>
+                  </a>
+                </div>
+                <div class="choice-item vu col l-4 m-4 c-0">
+                  <a href="" class="choice-link">
+                    <div>
+                      <img src="https://i.scdn.co/image/ab6761610000f178ec1bd421630bf3ad110c09fa" alt="" class="choice-item-img">
+                    </div>
+                    <span class="choice-item--name">Vũ</span>
+                  </a>
+                </div>
+                <div class="choice-item imagine-dragons col l-4 m-4 c-0">
+                  <a href="" class="choice-link">
+                    <div>
+                      <img src="https://i.scdn.co/image/ab67616100005174920dc1f617550de8388f368e" alt="" class="choice-item-img">
+                    </div>
+                    <span class="choice-item--name">Imagine Dragons</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="music-wrap grid row no-gutters">
+          <div class="music-list col l-7 m-7">
+            <div class="music-list--heading">
+              <h3 class="music-list-header">Most Popular</h3>
+              <span class="music-list-description"></span>
+            </div>
+            <div class="music-list--body">              
+            </div>           
+          </div>
+          <div class="music-player-container col l-5 m-5">
+            <!-- Dashboard -->
+            <div class="music-player--dashboard">
+              <h3 class="music-player-dashboard--tittle">Now Playing:</h3>
+              <span class="music-playing-header--name"></span>
+            </div>
+            <!-- Body -->
+            <div class="music-playing-body">  
+              <div class="fix-wrap">          
+                <div class="music-playing-disc-wrap">
+                  <div class="music-playing-disc">
+                  <img src="" alt="" class="music-playing-img">
+                  </div>
+                  <div class="music-playing-name"></div>
+                  <div class="music-playing-author"></div>
+                  <div class="progress-wrap">
+                  <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                  <audio id="audio" src=""></audio>
+                  </div>
+                </div> 
+              </div>
+              <!-- Control -->
+              <div class="music-playing-control">
+                <div class="control grid row no-gutters">
+                  <div class="btn btn-repeat col m-2-4">
+                    <i class="fas fa-redo"></i>
+                  </div>
+                  <div class="btn btn-prev col m-2-4">
+                    <i class="fas fa-step-backward"></i>
+                  </div>
+                  <div class="btn btn-toggle-play col m-2-4">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                  </div>
+                  <div class="btn btn-next col m-2-4">
+                    <i class="fas fa-step-forward"></i>
+                  </div>
+                  <div class="btn btn-random col m-2-4">
+                    <i class="fas fa-random"></i>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div> 
+  </div>
+
+  <script src="/main.js">
+  </script>
+</body>
+</html>
