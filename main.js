@@ -45,6 +45,7 @@ const clientSecret = 'cdbfe903116848bf98cf47ad3ab24f22'
 
 const app = {
     currentIndex: 0,
+    isOpen: false,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
@@ -162,10 +163,20 @@ const app = {
         const _this = this
 
         menuMobileButton.onclick = () => {
-            Object.assign(navbar.style, {
-                height: '230px',
-                opacity: '1',
-            })
+            if (!_this.isOpen) {
+                Object.assign(navbar.style, {
+                    height: '230px',
+                    opacity: '1',
+                })
+                _this.isOpen = !_this.isOpen
+            } else {
+                Object.assign(navbar.style, {
+                    height: '0px',
+                    opacity: '0',
+                })
+                _this.isOpen = !_this.isOpen
+            }
+            console.log(_this.isOpen);
         }
 
         // CD rotate

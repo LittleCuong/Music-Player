@@ -1340,6 +1340,10 @@ html {
         font-size: 12px;
     }
 
+    .music-playing-body {
+        height: 360px;
+    }
+
     .music-player-dashboard--tittle {
         font-size: 16px;
     }
