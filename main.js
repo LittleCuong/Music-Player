@@ -176,7 +176,6 @@ const app = {
                 })
                 _this.isOpen = !_this.isOpen
             }
-            console.log(_this.isOpen);
         }
 
         // CD rotate
